@@ -9,11 +9,18 @@ export default defineConfig({
   root: '.',
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    }
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './my-cv-app/src')
     }
-  }
+  },
+  publicDir: 'my-cv-app/public'
 }) 
