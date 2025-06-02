@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
-import "./styles.css";
 import ReactMarkdown from "react-markdown";
 import resumePDF from "./assets/RESUME INTERNSHIP.pdf";
 
