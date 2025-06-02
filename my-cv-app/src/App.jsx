@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 import ReactMarkdown from "react-markdown";
 import resumePDF from "./assets/RESUME INTERNSHIP.pdf";
 
-import profilePic from "./assets/profile.JPG";
+import profilePic from "./assets/profile.jpg";
 import alarmsetup from "./assets/alarmsetup.png";
 import alarmsetup1 from "./assets/alarmsetup1.png";
 import alarmsetup2 from "./assets/alarmsetup2.png";
