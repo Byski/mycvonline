@@ -929,7 +929,7 @@ function App() {
         </Routes>
 
         <footer className="text-center text-xs p-4 text-gray-500 bg-[#111827]">
-          © 2025 [Your Name]. Crafted with 💻 + ☕
+          © 2025 ebokosiaebube. Crafted with 💻 + ☕
         </footer>
       </div>
     </Router>
