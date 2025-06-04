@@ -221,7 +221,7 @@ const projects = [
   title: "Car Rental System",
   description: "Java-based desktop application for car rental service management.",
   image: carRental,
-  githubUrl: "https://github.com/Byski/car-rental-system",
+  githubUrl: "https://github.com/Byski/car-rental-system.git",
   details: (
     <>
       <h3 className="text-xl font-semibold text-teal-300 mb-4">Project Overview</h3>
