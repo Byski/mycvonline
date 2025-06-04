@@ -876,51 +876,79 @@ function Home() {
   );
 }
 
+function NavBar() {
+  const navigate = useNavigate();
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    // If we're not on home page, go there first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  return (
+    <nav className="flex justify-between items-center px-6 py-4 shadow-md bg-[#111827] sticky top-0 z-50 backdrop-blur">
+      <div className="h-10">
+        <img src={logo} alt="dev.by.me logo" className="h-full w-auto" />
+      </div>
+      <ul className="flex items-center space-x-6 font-medium text-sm">
+        <li><Link to="/" className="hover:text-teal-300 transition">Home</Link></li>
+        <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="hover:text-teal-300 transition">About</a></li>
+        <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="hover:text-teal-300 transition">Projects</a></li>
+        <li><a href="#skills" onClick={(e) => handleNavClick(e, 'skills')} className="hover:text-teal-300 transition">Skills</a></li>
+        <li><a href="#hobbies" onClick={(e) => handleNavClick(e, 'hobbies')} className="hover:text-teal-300 transition">Hobbies</a></li>
+        <li>
+          <motion.a
+            href={resumePDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex items-center px-6 py-2 overflow-hidden font-bold rounded-lg group bg-gradient-to-br from-[#00BFA6] to-[#5C4DFF] hover:from-[#5C4DFF] hover:to-[#00BFA6] text-white transition-all duration-300 ease-out"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+            <span className="relative flex items-center">
+              <svg 
+                className="w-5 h-5 mr-2" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                />
+              </svg>
+              My CV
+            </span>
+          </motion.a>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-gray-100 font-sans">
-        <nav className="flex justify-between items-center px-6 py-4 shadow-md bg-[#111827] sticky top-0 z-50 backdrop-blur">
-          <div className="h-10">
-            <img src={logo} alt="dev.by.me logo" className="h-full w-auto" />
-          </div>
-          <ul className="flex items-center space-x-6 font-medium text-sm">
-            <li><Link to="/" className="hover:text-teal-300 transition">Home</Link></li>
-            <li><a href="#about" className="hover:text-teal-300 transition">About</a></li>
-            <li><a href="#projects" className="hover:text-teal-300 transition">Projects</a></li>
-            <li><a href="#skills" className="hover:text-teal-300 transition">Skills</a></li>
-            <li><a href="#hobbies" className="hover:text-teal-300 transition">Hobbies</a></li>
-            <li>
-              <motion.a
-                href={resumePDF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-flex items-center px-6 py-2 overflow-hidden font-bold rounded-lg group bg-gradient-to-br from-[#00BFA6] to-[#5C4DFF] hover:from-[#5C4DFF] hover:to-[#00BFA6] text-white transition-all duration-300 ease-out"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span className="relative flex items-center">
-                  <svg 
-                    className="w-5 h-5 mr-2" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
-                    />
-                  </svg>
-                  My CV
-                </span>
-              </motion.a>
-            </li>
-          </ul>
-        </nav>
-
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           {projects.map((project) => (
