@@ -296,7 +296,7 @@ const projects = [
   description: "Traffic Light built with Arduino.",
   image: tlight,
   images: [tlight, tlight2],
-  githubUrl: "https://github.com/yourusername/traffic-light-system",
+  githubUrl: "https://github.com/Byski/trafficlight.git",
   details: (
   <>
     <h3 className="text-xl font-semibold text-teal-300 mb-2">Project Overview:</h3>
@@ -343,7 +343,7 @@ const projects = [
   title: "Gold Scalping EA",
   description: "Breakout-based Expert Advisor for XAUUSD built in MQL5.",
   image: gold,
-  githubUrl: "https://github.com/yourusername/gold-scalping-ea",
+  githubUrl: "https://github.com/Byski/goldscalpea.git",
   details: (
     <>
       {/* Notice Banner */}
