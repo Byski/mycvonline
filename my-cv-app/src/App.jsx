@@ -634,7 +634,7 @@ function Home() {
     Hi, I'm a creative technologist who's been chasing curiosity since childhood.
   </p>
   <p>
-    It started with me trying to recreate my favorite superhero in <span className="font-medium">Blender</span> and making games in <span className="font-medium">Unity</span>. Back then, I wasn't thinking about careers — I just loved figuring out how things worked and bringing ideas to life.
+    It started with me trying to recreate my favorite superhero in <span className="font-medium">Blender</span> and making games in <span className="font-medium">Unity</span>. Back then, I wasn't thinking about careers  I just loved figuring out how things worked and bringing ideas to life.
   </p>
   <p>
     That same curiosity led me to web development. I began with <span className="font-medium">HTML</span> and <span className="font-medium">CSS</span>, then explored deeper into <span className="font-medium">JavaScript</span> and <span className="font-medium">React</span>. I loved the power of turning a blank screen into something useful, visual, and interactive.
@@ -643,7 +643,7 @@ function Home() {
     Eventually, I got pulled into the world of trading. The structure of the markets fascinated me, and I started building my own automated strategies using <span className="font-medium">MQL5</span>. I picked up <span className="font-medium">Python</span> to analyze data and automate everything from alerts to trade logic.
   </p>
   <p>
-    These days, I'm expanding into <span className="font-medium">cloud engineering</span> — learning how to scale and deploy smarter systems with <span className="font-medium">Kubernetes</span>, containers, and automation tools. For me, it's all connected: frontend, automation, embedded, and cloud.
+    These days, I'm expanding into <span className="font-medium">cloud engineering</span>  learning how to scale and deploy smarter systems with <span className="font-medium">Kubernetes</span>, containers, and automation tools. For me, it's all connected: frontend, automation, embedded, and cloud.
   </p>
 
 </div>
