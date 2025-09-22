@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-const resumePDF = "/assets/RESUME INTERNSHIP(4).pdf";
+const resumePDF = `${import.meta.env.BASE_URL}assets/resume.pdf`;
 const profilePic = "/assets/profile.jpg";
 const alarmsetup = "/assets/alarmsetup.png";
 const alarmsetup1 = "/assets/alarmsetup1.png";
