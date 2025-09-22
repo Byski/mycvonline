@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 import ReactMarkdown from "react-markdown";
 
 const resumePDF = `${import.meta.env.BASE_URL}assets/resume.pdf`;
-const profilePic = "/assets/profile.jpg";
+const profilePic = "/assets/profile2.jpg";
 const alarmsetup = "/assets/alarmsetup.png";
 const alarmsetup1 = "/assets/alarmsetup1.png";
 const alarmsetup2 = "/assets/alarmsetup2.png";
